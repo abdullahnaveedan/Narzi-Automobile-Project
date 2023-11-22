@@ -1,0 +1,225 @@
+<%- include('../dashboard_pages/auth_alerts') %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       
+        label,p{
+            color: black;
+        }
+        input::placeholder {
+            color: black !important;
+        }
+
+        .icon:hover span {
+            color: white !important;
+        }
+
+        .heading {
+            cursor: pointer !important;
+            transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .heading:hover {
+            color: rgb(220, 167, 21) !important;
+        }
+
+        /* #pickup-location:focus {
+            outline: none !important;
+            border: none !important;
+        }
+        #pickupTime:focus {
+            outline: none !important;
+            border: none !important;
+        } */
+        .services-wrap{
+            position:sticky !important;
+            top: 0px !important;
+
+        }
+        .sticky { 
+        position: fixed !important; 
+        top: 60px !important; 
+        width: 100%; 
+        z-index: 999;
+    } 
+    .services-wrap{
+        background-color: #ffffff;
+        /* border-radius: 20px !important; */
+
+    }
+    input{
+        background-color: transparent;
+        height: 40px !important;
+    }
+    #btnRent{
+        background-color:transparent ;
+        color: black;
+        transition: 0.4s;
+        width: 100%;
+        border: 1px solid white ;
+        /* border-radius: 10px; */
+    }
+    .form-control{
+        padding: 3rem 17rem 2rem 1rem !important;
+    }
+    .form-group{
+    position: relative;
+    }
+
+    .form-group label {
+        position: absolute;
+        top: -8px;
+        left: -3px;
+        padding: 0.5rem;
+        pointer-events: none;
+    }
+   
+
+    </style>
+
+    <div class="hero-wrap ftco-degree-bg"
+        style="height: 1100px !important; background-image: url('<%= baseUrl %>/website/images/bg_1.jpg');"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container-fluid ">
+            <div class="col-md-12	featured-top">
+                <div class="row no-gutters">
+                    <div class="col-md-12 d-flex  flex-column mainctr" style="margin-top: 400px !important;">
+                        <div>
+                            <h1 class="heading-section text-white fw-bold  mb-4">Narzi Rental Car. Let’s Go!</h1>
+                        </div>
+                        <div class="services-wrap rounded-right " style="max-width: 1350px !important;" id="service" >
+                            
+                                <div id="new-itineraryRow" class="container-fluid">
+                                    <div class="" style="margin-top: 0px !important;">
+                                       
+                                        <div class="d-flex justify-content-start ">
+                                            <a href="/startReservation" class="nav-link text-dark">
+                                            Start Reservation
+                                            </a>
+                                          
+                                        </div>
+                                        
+                                    </div>
+                                        <div id="row" class="row d-flex justify-content-evenly">
+                                            
+                                            <div id="new-pickupLoc-containerInner"
+                                                class="form-group" >
+                                                <label class="">Confirmation  Number</label>
+                                                <div id="new-pickupLoc" class="text-black">
+                                                    <input type="number" style="" class="form-control" id="pickup-location"
+                                                        name="pickupLocation" autocorrect="off" autocomplete="off"
+                                                        value="">
+                                                </div>
+                                            </div>
+
+                                            <div id="new-pickupLoc-containerInner"
+                                                class="form-group">
+                                                <label class="text-black">Last Name</label>
+                                                <div id="new-pickupLoc" class="">
+                                                    <input type="text" class="ww-input border border-2 col-md-12 form-control" id="pickup-location"
+                                                        name="pickupdate" autocorrect="off" style="background-color: transparent !important;" autocomplete="off" value="">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="new-submit-container" >
+                                                    <button type="button" style="width: 200px;
+                                                    background-color: #ddd;
+                                                    outline: none;
+                                                    padding-top: 2rem ;
+                                                    padding-bottom: 1.2rem;" id="btnRent" class="res-submit ">
+                                                        Continue
+                                                    </button>
+                                              
+                                            </div>
+                                        
+                                        
+                                    </div>
+
+
+                            
+
+                    
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <section class="ftco-section ftco-no-pt bg-light" style="">
+        <div class="container">
+            <div class="row no-gutters">
+
+            </div>
+    </section>
+
+
+    <section class="ftco-section ftco-no-pt bg-light">
+        <div class="container">
+            
+            <div class="row">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="<%= baseUrl %>/website/images/AUNZ_SummerSales_EN.jpg" class="card-img-top" alt="...">
+                        
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="<%= baseUrl %>/website/images/image_6.jpg" class="card-img-top h-100" alt="...">
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="<%= baseUrl %>/website/images/asia_gpr_getmore.jpg" class="card-img-top" alt="...">
+                        
+                      </div>
+                    </div>
+                   
+                  </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        
+    // window.onscroll = function() {myFunction()}; 
+      
+    //   var navlist = document.getElementById("service"); 
+    //   var sticky = navlist.offsetTop; 
+    //     console.log(sticky);
+    //   /* Function to stick the nav bar */
+    //   function myFunction() { 
+    //       if (window.pageYOffset >= sticky) { 
+    //           navlist.classList.add("sticky") 
+    //       }  
+    //         else { 
+    //             navlist.classList.remove("sticky"); 
+    //         } 
+    //   } 
+
+
+    </script>
+
+
+
+        <!-- <%- include('../website_components/latest_services_component') %> -->
+
+        <!-- <%- include('../website_components/become_driver_component') %>
+
+
+<%- include('../website_components/testimonial_component') %>
+
+
+
+<%- include('../website_components/counting_component') %> -->

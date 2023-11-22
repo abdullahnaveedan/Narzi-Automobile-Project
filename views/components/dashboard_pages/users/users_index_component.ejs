@@ -1,0 +1,67 @@
+
+   
+  <%- include('../alerts') %>
+        
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2> Index </h2>
+                        
+                        <ul class="header-dropdown">
+                            <a href="/dashboard/users/create" class="btn  btn-raised bg-light waves-effect">Create New User</a>
+                          
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <% users.forEach(function(u){ %>
+                                <tr>
+                                    <td><%= u.username %></td>
+                                    <td><%= u.email %></td>
+                                    <td><%= u.Role.role_name %></td>
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch<%= u.id %>" <%= u.status === 1 ? 'checked' : '' %> data-userid="<%= u.id %>">
+                                            <label class="form-check-label" for="flexSwitch<%= u.id %>">Active</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <!-- <button type="button" class="btn btn-raised btn-default btn-circle waves-effect waves-circle waves-float"> <i class="material-icons">edit</i> </button>
+                                       -->
+                                      
+                                       <a href="/dashboard/users/destroy/<%= u.id %>">    <button type="button" class="btn btn-raised btn-default btn-circle waves-effect waves-circle waves-float"> <i class="material-icons">delete</i> </button></a>
+                          
+                          
+                                    </td>
+                                  
+                                </tr>
+                                <% }); %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+
+        <%- include('../status_updated') %>

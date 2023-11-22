@@ -1,0 +1,37 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+const checkboxes = document.querySelectorAll('.form-check-input');
+
+checkboxes.forEach(function(checkbox) {
+checkbox.addEventListener('change', function() {
+    const userId = this.dataset.userid;
+    const isChecked = this.checked;
+    
+    // Send an AJAX request to update the user's status
+    fetch(`/dashboard/customers/updateStatus/${userId}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        },
+        body: JSON.stringify({ status: isChecked ? 1 : 0 })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log('Status updated successfully');
+            alert("Status updated successfully");
+        } else {
+            console.error('Failed to update status');
+            alert("Failed to update status");
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+});
+});
+
+</script>
+

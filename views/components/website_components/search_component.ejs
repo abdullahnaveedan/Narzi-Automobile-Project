@@ -1,0 +1,73 @@
+<style>
+    .popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .search-form {
+    margin-bottom: 0;
+  }
+  
+  
+  </style>
+  <div id="search-popup" class="popup-container">
+    <div class="popup-content">
+      <form class="search-form">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search..." required>
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+<section class="ftco-section ftco-about">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(<%= baseUrl %>/website/images/about.jpg);">
+        </div>
+        <div class="col-md-6 wrap-about ftco-animate">
+          <div class="heading-section heading-section-white pl-md-5">
+            <span class="subheading">About us</span>
+            <h2 class="mb-4">Welcome to Narz</h2>
+  
+            <p>Narcious Car Rental was established in 1975 with a modest fleet of 5 vehicles. Today, after four decades Deinfa has grown that fleet to over 500 vehicles, with a prominent name in the rental market. Superior customer satisfaction is a testament to our growth, with a long list of loyal and valued clients. This includes multinational corporations, tourists, and local Pakistanis alike.</p>
+            <p>The management and staff of Narcious are dedicated to maintaining and building strong relations with our customers. We are a local company which operates with professional standards that par with big International rental companies. Our modern, well-maintained, fleet of vehicles includes selections suitable for any budget and boasts a variety of options.</p>
+            <!-- <p><button id="show-search-button" class="btn btn-dark py-3 px-4">Search Vehicle</button></p> -->
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("show-search-button").addEventListener("click", function() {
+    document.getElementById("search-popup").style.display = "block";
+  });
+  
+  document.getElementById("search-popup").addEventListener("click", function(event) {
+    if (event.target === this) {
+      this.style.display = "none";
+    }
+  });
+  
+  
+  </script>

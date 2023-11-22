@@ -1,0 +1,385 @@
+<%- include('../dashboard_pages/auth_alerts') %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        label,p{
+            color: black;
+        }
+        input::placeholder {
+            color: black !important;
+        }
+
+        .icon:hover span {
+            color: white !important;
+        }
+
+        .heading {
+            cursor: pointer !important;
+            transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .heading:hover {
+            color: rgb(220, 167, 21) !important;
+        }
+
+        #pickup-location:focus {
+            outline: none !important;
+            border: none !important;
+        }
+        #pickupTime:focus {
+            outline: none !important;
+            border: none !important;
+        }
+        .services-wrap{
+            position:sticky !important;
+            top: 0px !important;
+
+        }
+        
+    .services-wrap{
+        background-color: #fff;
+        border-radius: 20px !important;
+
+    }
+    input{
+        background-color: transparent;
+        height: 40px !important;
+    }
+    #btnRent{
+  background-color:transparent ;
+  color: black;
+  transition: 0.4s;
+  width: 100%;
+  border: 1px solid white ;
+  border-radius: 10px;
+}
+#btnRent:hover{
+  background-color:black;
+color: white;
+}
+.form-group{
+    position: relative;
+}
+
+.form-group label {
+    position: absolute;
+    top: -8px;
+    left: -3px;
+    padding: 0.5rem;
+    pointer-events: none;
+}
+#new-resSubmit button:hover{
+    box-shadow: 0px 5px 5px #d5d554;  
+    outline: none;
+    border: none;
+}
+@media only screen and (max-width: 500px) {
+  .med-1{
+      display: block !important; 
+    }
+    .med-3{
+      display: block !important; 
+    }
+    .med-2{
+      display: block !important; 
+    }
+    .loc{
+      display: block !important; 
+    }
+    .form-control{
+      width: 180px;  
+      border-radius: 0px;
+      margin-left: 2px;
+    }
+    .ftco-degree-bg:after{
+      display: none;
+    }
+    .dsc{
+      width: 200px;  
+    }
+    .mainctr{
+      height: 1550px !important;
+    }
+    
+}
+@media(min-width: 501px) and (max-width: 768px) {
+    .med-1{
+      display: block !important; 
+    }
+    .form-control{
+      width: 180px;  
+      border-radius: 0px;
+      margin-left: 2px;
+    }
+    
+    .dsc{
+      width: 245px;  
+    }
+    .mainctr{
+      height: 1400px !important;
+    }
+  }
+  @media(min-width: 769px) and (max-width: 1250px) {
+    .med-1{
+      display: block !important; 
+    }
+    .form-control{
+      width: 300px;
+      margin-left: 2px;
+    }
+    
+    .dsc{
+      width: 245px;  
+    }
+    .mainctr{
+      height: 1400px !important;
+    }
+  }
+    </style>
+
+    <div class="hero-wrap ftco-degree-bg mainctr"
+        style="height: 1100px; background-image: url('<%= baseUrl %>/website/images/bgfinal.jpg'); "
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container-fluid ">
+            <div class="col-md-12	featured-top">
+                <div class="row no-gutters">
+                    <div class="col-md-12 d-flex  flex-column" style="margin-top: 510px;">
+                        <div class="head" >
+                            <h1 class="heading-section text-white fw-bold">Narzi Rental Car. Let’s Go!</h1>
+                        </div>
+
+                        <div class="services-wrap rounded-right" style="width: 100% !important;border-bottom: 8px solid #ffc107" id="service" >
+                            <!-- View /Edit -->
+                            <div class="d-flex justify-content-end med-1" >
+                              <label class="fw-bold text-black ml-3" style="font-size: 14px !important;width: 100% !important;">Add a  Discount Code <i class="fa-solid fa-circle-info text-muted"></i></label>
+                              <a href="/viewModify" style="margin-top: -13px !important;" class="nav-link text-dark">View&nbsp;/&nbsp;Edit&nbsp;/&nbsp;Cancel</a>
+
+                            </div>
+                            <!-- Discount -->
+                            <div class="w-25 pl-3" style="margin-top: 0px !important; ">
+                                <div class="align-items-center">
+                                    <div class="form-group d-flex align-items-center w-full">
+                                      <label for="" class="label text-dark">Discount</label>
+                                        <input  class="form-control dsc" type="text" style="border: 2px solid #ddddd3 !important; padding: 3rem 0rem 1rem 1rem !important;background: transparent !important;margin-left: 0px !important;" id="referalCode">
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- Locations -->
+                                <div id="new-itineraryRow" class="med-1 container-fluid mt-3 d-flex">
+                                        <div class="loc d-flex ">
+                                            <div class="form-group ">
+                                              <label for="" class="label  text-dark">Pick-up Location</label>
+                                              <input  class="form-control" type="text" style="border: 2px solid #ddddd3 !important; padding: 3rem 0rem 1rem 1rem !important;background: transparent !important;" id="pickupLoc" >
+                                              
+                                            </div>
+
+                                            <div class="form-group mr-2">
+                                              <label for="" class="label  text-dark">Drop-off Location</label>
+                                              <input  class="form-control" type="text" style="border: 2px solid #ddddd3 !important; padding: 3rem 0rem 1rem 1rem !important;background: transparent !important;" id="location">
+                                            </div>
+                                          </div>
+                                   
+                                        <div class="d-flex med-2">
+                                            <div class="form-group">
+                                              <label for="" class="label  text-dark">Pick-up Date</label>
+                                              <input  class="form-control" type="date" style="border: 2px solid #ddddd3 !important; padding: 3rem 0rem 1rem 1rem !important;background: transparent !important;" id="pickupDate">
+                                            </div>
+                                            <div class="form-group mr-2">
+                                              <label for="" class="label  text-dark">Drop-off Date</label>
+                                              <input  class="form-control" type="date" style="border: 2px solid #ddddd3 !important; padding: 3rem 0rem 1rem 1rem !important;background: transparent !important;" id="dropdata">
+                                            </div>
+                                          </div>
+                                        <div class="d-flex med-3">
+                                            <div class="form-group">
+                                              <label for="" class="label  text-dark">Pick-up time</label>
+                                              <input  class="form-control" style="border: 2px solid #ddddd3 !important; padding: 3rem 0rem 1rem 1rem !important;background: transparent !important;" id="time_pick" placeholder="00:00">
+                                            </div>
+                                            <div class="form-group mr-2">
+                                              <label for="" class="label  text-dark">Drop-off time</label>
+                                              <input  class="form-control" style="border: 2px solid #ddddd3 !important; padding: 3rem 0rem 1rem 1rem !important;background: transparent !important;" id="time_drop" placeholder="00:00">
+                                            </div>
+                                          </div>
+                                        <div class="new-submit-container text-center">
+                                            <div id="new-resSubmit" class="">
+                                                <button  type="button" style="background-color: #ffc107; padding: 1.5rem 3rem 1rem 3rem !important;font-weight: 500;outline: none;" id="btnRent" class="res-submit ">
+                                                    Continue
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section ftco-no-pt bg-light">
+        <div class="container">
+            <div class="row no-gutters">
+
+            </div>
+    </section>
+
+
+    <section class="ftco-section ftco-no-pt bg-light" >
+        <div class="container">
+            
+            <div class="row">
+                <div class="row row-cols-1 row-cols-md-3 g-4" style="box-shadow:-2px 5px 12px;">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="<%= baseUrl %>/website/images/AUNZ_SummerSales_EN.jpg" class="card-img-top" alt="...">
+                        
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100" style="box-shadow:-2px 5px 12px;">
+                        <img src="<%= baseUrl %>/website/images/image_6.jpg" class="card-img-top h-100" alt="...">
+                       
+                      </div>
+                    </div>
+                    
+                   
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module">
+
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
+      import { getFirestore, collection, addDoc  } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
+      
+          const firebaseConfig = {
+            apiKey: "AIzaSyAYfTDhUtq4M4ViZlv2KpOF88VvTUk2ow4",
+            authDomain: "narzi-3c9be.firebaseapp.com",
+            projectId: "narzi-3c9be",
+            storageBucket: "narzi-3c9be.appspot.com",
+            messagingSenderId: "156282690180",
+            appId: "1:156282690180:web:cd23d9b018b8852393c0d1",
+            measurementId: "G-XHFGQQEXK4"
+          };
+      
+      
+          const app = initializeApp(firebaseConfig);
+          const db = getFirestore(app);
+      
+          let btn = document.getElementById("btnRent");
+          btn.addEventListener("click", async () => {
+        // Get values from input fields
+        let refCode = +document.getElementById("referalCode").value;
+        let pickupLoc = document.getElementById("pickupLoc").value;
+        let location = document.getElementById("location").value;
+        let pickupDate = document.getElementById("pickupDate").value;
+        let dropdate = document.getElementById("dropdata").value;
+        let time_pick = document.getElementById("time_pick").value;
+        let time_drop = document.getElementById("time_drop").value;
+      
+        // Define an array to store validation error messages
+        const validationErrors = [];
+      
+  
+      
+        if (pickupLoc === "") {
+          validationErrors.push("Pickup location is required.");
+        }
+      
+        if (location === "") {
+          validationErrors.push("Location is required.");
+        }
+      
+        if (pickupDate === "") {
+          validationErrors.push("Pickup date is required.");
+        }
+      
+        if (dropdate === "") {
+          validationErrors.push("Drop date is required.");
+        }
+      
+        if (time_pick === "") {
+          validationErrors.push("Pickup time is required.");
+        }
+      
+        if (time_drop === "") {
+          validationErrors.push("Drop time is required.");
+        }
+      
+        // If there are validation errors, display them
+        if (validationErrors.length > 0) {
+      
+          Swal.fire({
+        icon: "error",
+        title:"Validation Error" ,
+        text: validationErrors.join("\n"),
+      });
+        } else {
+          try {
+            const docRef = await addDoc(collection(db, "Reservation"), {
+              refCode:refCode,
+              pickupLoc,
+              location,
+              pickupDate,
+              dropdate,
+              time_pick,
+              time_drop
+            }).then(()=>{
+      window.location.href='/vehicles'
+      })
+
+      //       Swal.fire({
+      //   icon: "success",
+      //   title: "Form Submit SuccesFully",
+      
+      // }).then(()=>{
+      // window.location.reload();
+      // })
+          } catch (error) {
+            Swal.fire({
+        icon: "error",
+        title: "Validation gg",
+        text:error,
+      });
+          }
+        }
+      });
+      
+        </script>
+      
+    <script>
+        
+    // window.onscroll = function() {myFunction()}; 
+      
+    //   var navlist = document.getElementById("service"); 
+    //   var sticky = navlist.offsetTop; 
+    //     console.log(sticky);
+    //   /* Function to stick the nav bar */
+    //   function myFunction() { 
+    //       if (window.pageYOffset >= sticky) { 
+    //           navlist.classList.add("sticky") 
+    //       }  
+    //         else { 
+    //             navlist.classList.remove("sticky"); 
+    //         } 
+    //   } 
+
+
+    </script>
+
+
+
+        <!-- <%- include('../website_components/latest_services_component') %> -->
+
+        <!-- <%- include('../website_components/become_driver_component') %>
+
+
+<%- include('../website_components/testimonial_component') %>
+
+
+
+<%- include('../website_components/counting_component') %> -->

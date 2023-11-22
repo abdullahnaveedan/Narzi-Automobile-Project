@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .container .card1{
+     margin:50px 0;
+    height:auto;
+    width:1000px;
+    background-color:#f7f7f9;
+    position:relative;
+    box-shadow:0 15px 30px rgba(0,0,0,0.1);
+    font-family: 'Source Sans Pro', sans-serif;
+   
+    
+}
+.container .card1 .form{
+    width:100%;
+    height:100%;
+    display:flex;
+}
+.container .card1 .left-side{
+    width:50%;
+    background-color:#f7f7f9;
+    height:100% !important;
+     padding:30px;
+}
+/*left-side-start*/
+.left_top{
+    margin-top:30px;
+    display:flex;
+    justify-content:space-between;
+}
+.img_sec{
+    display:flex;
+    justify-content:center;
+}
+.img_sec img{
+    width:40px;
+}
+.img_text{
+    margin-left:10px;
+}
+.img_text p{
+    font-size:13px;
+    font-weight:800;
+    color:#87879a;
+}
+.access{
+    margin-top:30px;
+}
+.access p{
+    margin-top:10px;
+    font-size:13px;
+    font-weight:600;
+}
+.input_text{
+    margin-top:20px;
+    position:relative;
+    width:100%;
+}
+input[type="password"]{
+    height:45px;
+    width:100%;
+    border:none;
+    outline:0;
+    border-radius:10px;
+    padding:5px 10px;
+    padding-right:33px;
+}
+input[type="text"]{
+    height:45px;
+    width:100%;
+    border:none;
+    outline:0;
+    border-radius:10px;
+    padding:5px 10px;
+    padding-right:33px;
+}
+.input_text span{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    border:1px solid #4f4e55;
+    position:absolute;
+    top:13px;
+    right:7px;
+   
+}
+.input_text span .fa-eye-slash{
+    margin-top:2px;
+     font-size:14px;
+     cursor:pointer;
+     transition:all 0.5s;
+     margin-right:1px;
+}
+.fa-eye{
+    margin-top:2px;
+     font-size:14px;
+     cursor:pointer;
+     transition:all 0.5s;
+      margin-right:1px;
+}
+.left_last{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.left_last p{
+    font-size:13px;
+    color:#8e8fa0;
+}
+.left_last button{
+    height:45px;
+    width:50%;
+    border:none;
+    background-color:#7047eb;
+    color:#fff;
+    font-size:13px;
+    cursor:pointer;
+    transition:all 0.5s;
+    border-radius:10px;
+}
+.left_last button:hover{
+    background-color:#3d11c1;
+}
+
+
+
+
+
+
+
+
+
+/*left-side-end*/
+.container .card1 .right-side{
+    width:50%;
+    background-color:#fff;
+    height:100%;
+     padding:30px;
+}
+/*right-side-start*/
+.right_img{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+}
+.right_img img{
+    width:40px;
+}
+.right_img h3{
+    margin-top:10px;
+}
+.date_status{
+    display:flex;
+    align-items:center; 
+    gap:20px;
+    margin-top:10px;
+}
+.status{
+    display:flex;
+    gap:10px
+}
+.status span{
+    font-size:13px;
+}
+.status span i{
+    margin-right:5px;
+    color:#4fd289;
+    font-size:15px;
+}
+.date{
+     display:flex;
+    gap:10px;
+}
+.date p{
+    font-size:13px;
+}
+.summary{
+    margin-top:20px;
+    height:45px;
+    width:100%;
+    background-color:#f7f7f9;
+    display:flex;
+    padding:5px 10px;
+    justify-content:space-between;
+    align-items:center;
+}
+.right_top{
+    margin-top:20px;
+}
+.right_top p{
+    font-size:13px;
+}
+.right_details {
+    margin-top:20px;
+}
+.order_deatils{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+    position:relative;
+}
+.order_deatils p{
+    font-size:13px;
+}
+.order_deatils span{
+    height:20px;
+    width:60px;
+    background-color:#f7f7f9;
+    font-size:13px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:900;
+    position:absolute;
+    left:70px;
+}
+.total p{
+    font-weight:900;
+    font-size:15px;
+}
+.fig span{
+    height:40px;
+    width:50px;
+    background-color:#f7f7f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:13px;
+    font-weight:800;
+}
+.fig_img h4{
+    font-size:13px;
+}
+.right_top button{
+    border:none;
+    background-color:#7047eb;
+    width:70px;
+    font-size:12px;
+    color:#fff;
+    border-radius:7px;
+    cursor:pointer;
+    transition:all 0.5s;
+}
+.right_top button:hover{
+    background-color:#3d11c1;
+}
+.right_h4{
+    font-size:13px;
+}
+.right_pics img{
+    width:20px;
+    height:20px;
+}
+
+.right_p p{
+    font-size:13px;
+    font-weight:800;
+  
+
+}
+.right_p p i{
+   margin-right:5px;
+}
+.right_pics .fa-check-circle-o{
+
+    color:#4fd289;
+    font-size:18px;
+    
+}
+.generate{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+.generate button{
+    height:45px;
+    width:150px;
+    border:none;
+    background-color:#7047eb;
+    border-radius:9px;
+    cursor:pointer;
+    transition:all 0.5s;
+    color:#fff;
+    font-size:13px;
+}
+.generate button:hover{
+    background-color:#3d11c1;
+}
+.powered{
+    margin-top:50px;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:13px;
+    color:#87889a;
+}
+.powered img{
+    width:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*right-side-end*/
+@media (max-width:750px) {
+    .container .card {
+        max-width: 350px;
+        height:scroll;
+        height:auto;
+    }
+    .container .card .right-side {
+ 
+          width:100%;
+    }
+    .container .card .left-side {
+          display: none;   
+    }
+}
+</style>
+
+  <%- include('website_classes/head') %>
+  <body>
+
+    <%- include('website_classes/navbar') %>
+    <!-- END nav -->
+    
+    <%- include('../components/website_pages/vehiclesCom') %>
+
+
+    <%- include('website_classes/footer') %>
+   
+  
+    <%- include('website_classes/loader') %>
+
+
+    <%- include('website_classes/footer_links') %>
+
+  
+    
+  </body>
+</html>

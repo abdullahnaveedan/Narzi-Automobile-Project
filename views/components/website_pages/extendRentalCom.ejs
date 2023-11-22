@@ -1,0 +1,236 @@
+<%- include('../dashboard_pages/auth_alerts') %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        label,p{
+            color: black;
+        }
+        input::placeholder {
+            color: black !important;
+        }
+
+        .icon:hover span {
+            color: white !important;
+        }
+
+        .heading {
+            cursor: pointer !important;
+            transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .heading:hover {
+            color: rgb(220, 167, 21) !important;
+        }
+
+        #pickup-location:focus {
+            outline: none !important;
+            border: none !important;
+        }
+        #pickupTime:focus {
+            outline: none !important;
+            border: none !important;
+        }
+        .services-wrap{
+            position:sticky !important;
+            top: 0px !important;
+
+        }
+        .sticky { 
+        position: fixed !important; 
+        top: 60px !important; 
+        width: 100%; 
+        z-index: 999;
+    } 
+    .services-wrap{
+        background-color: #fff;
+        border-radius: 20px !important;
+
+    }
+    input{
+        background-color: transparent;
+        height: 40px !important;
+    }
+    #btnRent{
+  background-color:transparent ;
+  background-color:black;
+  color:  white;
+  transition: 0.4s;
+  width: 100%;
+  
+  border-radius: 0px;
+}
+#btnRent:hover{
+    
+  border: 1px solid white ;
+}
+@media only screen and (max-width: 500px) {
+        .med-1{
+            padding-top: 110px !important;
+        }
+        .ftco-degree-bg:after
+        {
+            display: none;
+        }
+        .mainctr{
+            z-index: 1;
+        }
+        .hero-wrap{
+            height: 1600px !important;
+        }
+
+    }
+@media(min-width: 501px) and (max-width: 768px) {
+    .hero-wrap{
+            height: 1300px !important;
+        }
+}
+
+    </style>
+
+    <div class="hero-wrap ftco-degree-bg"
+        style="height: 1100px; background-image: url('<%= baseUrl %>/website/images/bg_1.jpg');"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+            <div class="col-md-12	featured-top">
+                <div class="row no-gutters">
+                    <div class="col-md-12 d-flex flex-column med-1" style="margin-top: 400px !important;">
+                        <div>
+                            <h1 class="heading-section text-white fw-bold  mb-4">Narzi Rental Car. Let’s Go!</h1>
+                        </div>
+
+                        <div class="services-wrap rounded-right mainctr" style="max-width: 1250px !important;" id="service" >
+                            
+                                <div id="new-itineraryRow" class="container-fluid mt-4 pt-4">
+                                    <div class="" style="margin-top: -20px !important;">
+                                       
+                                        <div class="d-flex" >
+                                            <h1 class="nav-link text-black" style="font-weight: 700;">
+                                                Extend your rental.
+                                            </h1>
+                                        </div>
+                                        <p style="font-size: 20px;"><strong> Currently Renting?</strong> Enter the information below to find and extend your rental.</p>
+                                        
+                                    </div>
+                                        <div id="row" class=" row d-flex" >
+                                            <div id="new-pickupLoc-containerInner"
+                                                class=" form-group" >
+                                                <div id="new-pickupLoc" class="text-black">
+                                                    <label class="">Rental Record  Number</label>
+                                                    <input type="number" style="background-color: transparent !important; padding:2.3rem 13rem 2rem 2rem;" class="form-control ww-input border border-2 " id="pickup-location"
+                                                        name="RentalRecordName" autocorrect="off" autocomplete="off"
+                                                        placeholder="Place on your receipt">
+                                                </div>
+                                            </div>
+
+                                            <div id="new-pickupLoc-containerInner" class="">
+                                                <label class="text-black">Last 4 of Driver's License Number</label>
+                                                <div id="new-pickupLoc" class="">
+                                                    <input type="text" class="ww-input border border-2 col-md-12 form-control" id="pickup-location"
+                                                        name="RentalNumber" autocorrect="off" placeholder="License Number" style="background-color: transparent !important; padding:2.3rem 13rem 2rem 2rem;" autocomplete="off" >
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div id="row" class=" row d-flex" >
+                                        <div id="new-pickupLoc-containerInner "
+                                            class=" form-group" >
+                                            <div id="new-pickupLoc" class="text-black">
+                                                <label class="">Rental Name</label>
+                                                <input type="text" style="background-color: transparent !important; padding:2.3rem 13rem 2rem 2rem;" class="form-control ww-input border border-2 " id="pickup-location"
+                                                    name="recordName" autocorrect="off" autocomplete="off"
+                                                    placeholder="Rental Name">
+                                            </div>
+                                        </div>
+
+                                        <div id="new-pickupLoc-containerInner" class="">
+                                            <label class="text-black">Phone number</label>
+                                            <div id="new-pickupLoc" class="">
+                                                <input type="number" class="ww-input border border-2 col-md-12 form-control" id="pickup-location"
+                                                    name="recordNumber" autocorrect="off" style="background-color: transparent !important; padding:2.3rem 13rem 2rem 2rem;" value="" placeholder="+92 xxx xxxx xxx" autocomplete="off" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="new-submit-container mt-4 ">
+                                                <button type="button" style="width: 200px; padding: 1.18rem;
+                                                margin-top: 0.851rem;" id="btnRent" class="res-submit">
+                                                    Find Rental
+                                                </button>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <section class="ftco-section ftco-no-pt bg-light ctr" style="">
+        <div class="container ">
+            <div class="text-center w-100">
+               <br>
+                <h3 class=" text-center">Find Your Rental Record Number...</h3>
+                <p>In the ‘Rental Agreement’ Email sent to you after checking out or on the receipt within <br> your rental jacket that was provided to you when you picked up your vehicle.</p>
+            </div>
+    </section>
+
+
+    <section class="ftco-section ftco-no-pt bg-light ">
+        <div class="container ctr">
+            
+            <div class="row">
+                
+                    <div class="col-md-6">
+                      <div class="">
+                        <img src="<%= baseUrl %>/website/images/rentalRecord.jpg" height="500px" class="card-img-top" alt="...">
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="">
+                        <img src="<%= baseUrl %>/website/images/rentrecord2.jpg" height="500px" class="card-img-top " alt="...">
+                       
+                      </div>
+                    </div>
+                   
+                   
+                  
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        
+    // window.onscroll = function() {myFunction()}; 
+      
+    //   var navlist = document.getElementById("service"); 
+    //   var sticky = navlist.offsetTop; 
+    //     console.log(sticky);
+    //   /* Function to stick the nav bar */
+    //   function myFunction() { 
+    //       if (window.pageYOffset >= sticky) { 
+    //           navlist.classList.add("sticky") 
+    //       }  
+    //         else { 
+    //             navlist.classList.remove("sticky"); 
+    //         } 
+    //   } 
+
+
+    </script>
+
+
+
+        <!-- <%- include('../website_components/latest_services_component') %> -->
+
+        <!-- <%- include('../website_components/become_driver_component') %>
+
+
+<%- include('../website_components/testimonial_component') %>
+
+
+
+<%- include('../website_components/counting_component') %> -->

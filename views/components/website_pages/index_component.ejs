@@ -1,0 +1,408 @@
+<%- include('../dashboard_pages/auth_alerts') %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+  <style>
+    input::placeholder {
+      color: rgb(3, 3, 3) !important;
+    }
+
+    input {
+      color: black;
+    }
+
+    .icon:hover span {
+      color: white !important;
+    }
+
+    .heading {
+      cursor: pointer !important;
+      transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .heading:hover {
+      color: rgb(220, 167, 21) !important;
+    }
+
+    #btnRent {
+      background-color: transparent;
+      color: black;
+      transition: 0.4s;
+      width: 100%;
+    }
+
+    #btnRent:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+  <div class="hero-wrap ftco-degree-bg"
+    style="    height: 1240px; background-image: url('<%= baseUrl %>/website/images/bgfinal.jpg');"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+        <div class="col-lg-8 ftco-animate" style="margin-top: -270px !important;">
+          <div class="text w-100 text-center mb-md-5 pb-md-5" style="margin-left: 100px !important;">
+            <h1 class="mb-4" style="font-size: 25px;">Fast &amp; Easy Way To Rent A Car</h1>
+            <p style="font-size: 14px;">A small river named Duden flows by their place and supplies it with the
+              necessary regelialia. It is a paradisematic country, in which roasted parts</p>
+            <a href="https://vimeo.com/45830194"
+              class="icon-wrap popup-vimeo d-flex align-items-center justify-content-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="ion-ios-play"></span>
+              </div>
+              <div class="heading-title ml-5">
+                <span>Easy steps for renting a car</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=""
+    style="width: 100%;  background-image:url('<%= baseUrl %>/website/images/background3.jpg') !important; background-repeat: no-repeat !important; background-position: center !important; background-size: cover !important;">
+
+    <section class="ftco-section ftco-no-pt " style="margin-top: -600px !important;">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-12	featured-top" style="margin-top: -390px !important;">
+            <div class="row no-gutters">
+
+              <div class="col-md-4 d-flex align-items-center">
+                <div class="request-form ftco-animate bg-warning ">
+                  <h2 class="text-dark">Make your trip</h2>
+                  <div class="form-group">
+                    <label for="" class="label text-dark">Enter Referral Code/affiliate code</label>
+                    <input type="number" class="form-control " id="referalCode"
+                      style="border: 2px solid white !important;color: black !important;"
+                      placeholder="Enter Referral Code/affiliate code">
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="label text-dark">Pick-up location</label>
+                    <input type="text" class="form-control" id="pickupLoc"
+                      style="border: 2px solid white !important;color: black !important;"
+                      placeholder="City, Airport, Station, etc">
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="label text-dark">Drop-off location</label>
+                    <input type="text" class="form-control" id="location"
+                      style="border: 2px solid white !important;color: black !important;"
+                      placeholder="City, Airport, Station, etc">
+                  </div>
+                  <div class="d-flex">
+                    <div class="form-group mr-2">
+                      <label for="" class="label text-dark">Pick-up date</label>
+                      <input type="date" class="form-control" style="border: 2px solid white !important;"
+                        id="pickupDate" placeholder="Date">
+                    </div>
+
+                    <div class="form-group mr-2 ">
+                      <label for="" class="label text-dark">Drop-off date</label>
+                      <input type="date" class="form-control" style="border: 2px solid white !important;" id="dropdata"
+                        placeholder="Date">
+
+                    </div>
+                  </div>
+
+                  <!-- <div style="display: flex !important;justify-content: space-between !important;align-items: center;">
+                <div class="form-group mr-2">
+                  <label for="" class="label text-dark">Pick-up time</label>
+                  <input type="time" class="form-control" style="border: 2px solid white !important;" id="" placeholder="Date">
+                  <div id="new-pickupLoc" class=" h-50">
+                    <select name="Dropofftime" id="pickupTime"  style="border: 2px solid white !important;" class=" h-100 w-100 bg-transparent"><option value="12:00">12:00</option><option value="12:30">12:30</option><option value="1:00">1:00</option><option value="1:30">1:30</option><option value="2:00">2:00</option><option value="2:30">2:30</option><option value="3:00">3:00</option><option value="3:30">3:30</option><option value="4:00">4:00</option><option value="4:30">4:30</option><option value="5:00">5:00</option><option value="5:30">5:30</option><option value="5:00">6:00</option><option value="5:30">6:30</option><option value="5:00">7:00</option><option value="7:30">7:30</option><option value="5:00">8:00</option><option value="8:30">8:30</option><option value="5:00">9:00</option><option value="9:30">9:30</option><option value="5:00">10:00</option><option value="10:30">10:30</option><option value="5:00">11:00</option><option value="11:30">11:30</option></select>
+                </div>
+                </div>
+                <div class="form-group mr-2">
+                  <label for="" class="label text-dark">AM/PM</label>
+                  <div id="new-pickupLoc" class=" h-50">
+                    <select name="Dropofftime" id="pickupTime"  style="border: 2px solid white !important;" class=" h-100 w-100  bg-transparent"><option value="PM">PM</option><option value="AM">AM</option></select>
+                </di>
+                </div>
+              </div>
+             
+                <div class="form-group mr-2 ">
+                  <label for="" class="label text-dark">Drop-off Time</label>
+                  <div id="new-pickupLoc" class=" h-50">
+                    <select name="Dropofftime" id="pickupTime"  style="border: 2px solid white !important;" class=" h-100 w-100 bg-transparent"><option value="12:00">12:00</option><option value="12:30">12:30</option><option value="1:00">1:00</option><option value="1:30">1:30</option><option value="2:00">2:00</option><option value="2:30">2:30</option><option value="3:00">3:00</option><option value="3:30">3:30</option><option value="4:00">4:00</option><option value="4:30">4:30</option><option value="5:00">5:00</option><option value="5:30">5:30</option><option value="5:00">6:00</option><option value="5:30">6:30</option><option value="5:00">7:00</option><option value="7:30">7:30</option><option value="5:00">8:00</option><option value="8:30">8:30</option><option value="5:00">9:00</option><option value="9:30">9:30</option><option value="5:00">10:00</option><option value="10:30">10:30</option><option value="5:00">11:00</option><option value="11:30">11:30</option></select>
+                </div>
+                </div>
+                <div class="form-group mr-2">
+                  <label for="" class="label text-dark">AM/PM</label>
+                  <div id="new-pickupLoc" class=" h-50">
+                    <select name="Dropofftime" id="pickupTime"  style="border: 2px solid white !important;" class=" h-100 w-100  bg-transparent"><option value="PM">PM</option><option value="AM">AM</option></select>
+                </div>
+                </div>
+              </div> -->
+
+                  <div class="d-flex ">
+                    <div class="form-group mr-2">
+                      <label for="" class="label  text-dark">Pick-up time</label>
+                      <input class="form-control" style="border: 2px solid white !important;" id="time_pick"
+                        placeholder="Time">
+                    </div>
+                    <div class="form-group mr-2">
+                      <label for="" class="label  text-dark">Drop-off time</label>
+                      <input class="form-control" style="border: 2px solid white !important;" id="time_drop"
+                        placeholder="Time">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <button  
+                      style="border: 2px solid white !important;border-radius: 10px;" class="col-md-12 py-3 px-4"
+                      id="btnRent">Rent A Car Now</button>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-md-8 d-flex align-items-center">
+                <div class="services-wrap rounded-right w-100">
+                  <h3 class="heading-section mb-4 text-center">Better Way to Rent Your Perfect Car</h3>
+                  <div class="row d-flex mb-4">
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                      <div class="services w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center btn btn-outline-warning"><span
+                            class="flaticon-route text-warning"></span>
+                        </div>
+                        <div class="text w-100">
+                          <h3 class="heading mb-2">Choose Your Pickup Location</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                      <div class="services w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center btn btn-outline-warning"><span
+                            class="flaticon-handshake text-warning"></span></div>
+                        <div class="text w-100">
+                          <h3 class="heading mb-2">Select the Best Deal</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                      <div class="services w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center  btn btn-outline-warning">
+                          <span class="flaticon-rent text-warning"></span></div>
+                        <div class="text w-100">
+                          <h3 class="heading mb-2">View your rental reservation</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group text-right">
+                    <!-- <a href="/car-reservation" class="btn btn-warning py-3 px-4">View Reservation</a> -->
+                  </div>
+
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+    <section class="ftco-section ftco-no-pt ">
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+            <span class="subheading">What we offer</span>
+            <h2 class="mb-2 text-white">Feeatured Vehicles</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="carousel-car owl-carousel">
+              <div class="item">
+                <div class="car-wrap rounded ftco-animate">
+                  <div class="img rounded d-flex align-items-end"
+                    style="background-image: url('<%= baseUrl %>/website/images/car-2.jpg');">
+                  </div>
+                  <div class="text">
+                    <h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
+                    <div class="d-flex mb-3">
+                      <span class="cat">Cheverolet</span>
+                      <p class="price ml-auto text-warning">$500 <span>/day</span></p>
+                    </div>
+                    <p class="d-flex mb-0 d-block"><a href="/car-reservation" class="btn btn-warning py-2 mr-1">Book
+                        now</a> <a href="/car-single" class="btn btn-dark py-2 ml-1">Details</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="car-wrap rounded ftco-animate">
+                  <div class="img rounded d-flex align-items-end"
+                    style="background-image: url('<%= baseUrl %>/website/images/car-2.jpg');">
+                  </div>
+                  <div class="text">
+                    <h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
+                    <div class="d-flex mb-3">
+                      <span class="cat">Cheverolet</span>
+                      <p class="price ml-auto text-warning">$500 <span>/day</span></p>
+                    </div>
+                    <p class="d-flex mb-0 d-block"><a href="/car-reservation" class="btn btn-warning py-2 mr-1">Book
+                        now</a> <a href="/car-single" class="btn btn-dark py-2 ml-1">Details</a></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="car-wrap rounded ftco-animate">
+                  <div class="img rounded d-flex align-items-end"
+                    style="background-image: url(<%= baseUrl %>/website/images/car-2.jpg);">
+                  </div>
+                  <div class="text">
+                    <h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
+                    <div class="d-flex mb-3">
+                      <span class="cat">Cheverolet</span>
+                      <p class="price ml-auto text-warning">$500 <span>/day</span></p>
+                    </div>
+                    <p class="d-flex mb-0 d-block"><a href="/car-reservation" class="btn btn-warning py-2 mr-1">Book
+                        now</a> <a href="/car-single" class="btn btn-dark py-2 ml-1">Details</a></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="car-wrap rounded ftco-animate">
+                  <div class="img rounded d-flex align-items-end"
+                    style="background-image: url(<%= baseUrl %>/website/images/car-2.jpg);">
+                  </div>
+                  <div class="text">
+                    <h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
+                    <div class="d-flex mb-3">
+                      <span class="cat">Cheverolet</span>
+                      <p class="price ml-auto text-warning">$500 <span>/day</span></p>
+                    </div>
+                    <p class="d-flex mb-0 d-block"><a href="/car-reservation" class="btn btn-warning py-2 mr-1">Book
+                        now</a> <a href="/car-single" class="btn btn-dark py-2 ml-1">Details</a></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
+import { getFirestore, collection, addDoc  } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAYfTDhUtq4M4ViZlv2KpOF88VvTUk2ow4",
+      authDomain: "narzi-3c9be.firebaseapp.com",
+      projectId: "narzi-3c9be",
+      storageBucket: "narzi-3c9be.appspot.com",
+      messagingSenderId: "156282690180",
+      appId: "1:156282690180:web:cd23d9b018b8852393c0d1",
+      measurementId: "G-XHFGQQEXK4"
+    };
+
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    let btn = document.getElementById("btnRent");
+    btn.addEventListener("click", async () => {
+  // Get values from input fields
+  let refCode = +document.getElementById("referalCode").value;
+  let pickupLoc = document.getElementById("pickupLoc").value;
+  let location = document.getElementById("location").value;
+  let pickupDate = document.getElementById("pickupDate").value;
+  let dropdate = document.getElementById("dropdata").value;
+  let time_pick = document.getElementById("time_pick").value;
+  let time_drop = document.getElementById("time_drop").value;
+
+  // Define an array to store validation error messages
+  const validationErrors = [];
+
+  // Validate each input field
+  if (refCode == "") {
+    validationErrors.push("Referral code is required.");
+  }
+
+  if (pickupLoc === "") {
+    validationErrors.push("Pickup location is required.");
+  }
+
+  if (location === "") {
+    validationErrors.push("Location is required.");
+  }
+
+  if (pickupDate === "") {
+    validationErrors.push("Pickup date is required.");
+  }
+
+  if (dropdate === "") {
+    validationErrors.push("Drop date is required.");
+  }
+
+  if (time_pick === "") {
+    validationErrors.push("Pickup time is required.");
+  }
+
+  if (time_drop === "") {
+    validationErrors.push("Drop time is required.");
+  }
+
+  // If there are validation errors, display them
+  if (validationErrors.length > 0) {
+
+    Swal.fire({
+  icon: "error",
+  title:"Validation Error" ,
+  text: validationErrors.join("\n"),
+});
+  } else {
+    try {
+      const docRef = await addDoc(collection(db, "Trip"), {
+        refCode:refCode,
+        pickupLoc,
+        location,
+        pickupDate,
+        dropdate,
+        time_pick,
+        time_drop
+      });
+      Swal.fire({
+  icon: "success",
+  title: "Form Submit SuccesFully",
+
+}).then(()=>{
+window.location.reload();
+})
+    } catch (error) {
+      Swal.fire({
+  icon: "error",
+  title: "Validation gg",
+  text:error,
+});
+    }
+  }
+});
+
+  </script>
+
+
+  <%- include('../website_components/search_component') %>
+
+    <!-- <%- include('../website_components/latest_services_component') %> -->
+
+    <!-- <%- include('../website_components/become_driver_component') %>
+
+
+<%- include('../website_components/testimonial_component') %>
+
+
+
+<%- include('../website_components/counting_component') %> -->

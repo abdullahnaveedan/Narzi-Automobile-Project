@@ -1,0 +1,61 @@
+<aside id="leftsidebar" class="sidebar">
+    <!-- User Info -->
+    <div class="user-info">
+        <div class="image">
+            <img src="<%= baseUrl %>/dashboard/html/assets/images/xs/avatar1.jpg" width="48" height="48" alt="User" />
+        </div>
+        <div class="info-container">
+            <div class="name" data-toggle="dropdown"><%= sessionInfo.username %></div>
+            <div class="btn-group user-helper-dropdown">
+                <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button"> keyboard_arrow_down </i>
+                <ul class="dropdown-menu slideUp">
+                    <li><a href="/dashboard/profile"><i class="material-icons">person</i>Profile</a></li>
+                   
+              
+                    <li class="divider"></li>
+                    <li><a href="/"><i class="material-icons">input</i>Sign Out</a></li>
+                </ul>
+            </div>
+            <div class="email"><%= sessionInfo.email %></div>
+        </div>
+    </div>
+ 
+    <div class="menu">
+        <ul class="list">
+            <li class="header">Login As: <%= sessionInfo.role_name %></li>
+            <li  class="<%= activeRoute === 'dashboard_index' ? 'active open' : '' %>"><a href="/dashboard" ><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+          
+            <% if (sessionInfo.role_name === 'Admin') { %>
+            <li class="<%= activeRoute === 'dashboard_roles_index' ? 'active open'  : activeRoute === 'dashboard_roles_create' ? 'active open' : '' %>"><a href="/dashboard/roles" ><i class="zmdi zmdi-accounts-list"></i><span>Roles</span> </a></li>
+
+            
+            <li class="<%= activeRoute === 'dashboard_users_index' ? 'active open'  : activeRoute === 'dashboard_users_create' ? 'active open' : '' %>"><a href="/dashboard/users" ><i class="zmdi zmdi-accounts"></i><span>Users</span> </a></li>
+
+            <li class="<%= activeRoute === 'dashboard_customers_index' ? 'active open'  : '' %>"><a href="/dashboard/customers" ><i class="zmdi zmdi-accounts"></i><span>Customers</span> </a></li>
+            
+            <li class="<%= activeRoute === 'dashboard_vendors_index' ? 'active open'  : '' %>"><a href="/dashboard/vendors" ><i class="zmdi zmdi-accounts"></i><span>Vendors</span> </a></li>
+
+            <li class="<%= activeRoute === 'dashboard_affiliates_index' ? 'active open'  : '' %>"><a href="/dashboard/affiliates" ><i class="zmdi zmdi-accounts"></i><span>Affiliates</span> </a></li>
+
+            <li class="<%= activeRoute === 'dashboard_brands_index' ? 'active open'  : activeRoute === 'dashboard_brands_create' ? 'active open'  : '' %>"><a href="/dashboard/brands" ><i class="zmdi zmdi-car"></i><span>Brands</span> </a></li>
+
+
+            <li class="<%= activeRoute === 'dashboard_vehicles_index' ? 'active open' : activeRoute === 'dashboard_vehicles_sell' ? 'active open' : activeRoute === 'dashboard_vehicles_buy' ? 'active open'  : activeRoute === 'dashboard_vehicles_create' ? 'active open'  : '' %>"><a href="/dashboard/vehicles" ><i class="zmdi zmdi-car"></i><span>Vehicles</span> </a></li>
+
+        
+            <li class="<%= activeRoute === 'dashboard_feedbacks_index' ? 'active open'  : '' %>"><a href="/dashboard/feedbacks" ><i class="zmdi zmdi-comments"></i><span>Feedbacks</span> </a></li>
+            <% } else if(sessionInfo.role_name === 'Vendor'){ %>
+                <li class="<%= activeRoute === 'dashboard_vehicles_index' ? 'active open' : activeRoute === 'dashboard_vehicles_sell' ? 'active open' : activeRoute === 'dashboard_vehicles_buy' ? 'active open'  : activeRoute === 'dashboard_vehicles_create' ? 'active open'  : '' %>"><a href="/dashboard/vehicles" ><i class="zmdi zmdi-car"></i><span>Vehicles</span> </a></li>
+            <% } else if( sessionInfo.role_name === 'Affiliate' ){ %>
+                <li class="<%= activeRoute === 'dashboard_vendors_index' ? 'active open'  : '' %>"><a href="/dashboard/vendors" ><i class="zmdi zmdi-accounts"></i><span>Vendors</span> </a></li>
+
+            <% } %>
+
+          
+         
+        
+        </ul>
+    </div>
+   
+</aside>
+

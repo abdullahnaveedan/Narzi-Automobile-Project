@@ -1,0 +1,104 @@
+
+<%- include('../alerts') %>
+  
+        
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2> Index </h2>
+                        
+                        <ul class="header-dropdown">
+                            <a href="/dashboard/vehicles/create" class="btn  btn-raised bg-light waves-effect">Create New Vehicle</a>
+                          
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+                            <thead>
+                              <tr>
+                                <th>Brand</th>
+                                <th>Vehicle Name</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tfoot>
+                              <tr>
+                                <th>Brand</th>
+                                <th>Vehicle Name</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                              </tr>
+                            </tfoot>
+                            <tbody>
+                              <% vehicles.forEach(function(vehicle) { %>
+                                <tr>
+                                  <td><%= vehicle.Brand.brand_name %></td>
+                                  <td><%= vehicle.name %></td>
+                                  <td>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch<%= vehicle.id %>" <%= vehicle.status === 1 ? 'checked' : '' %> data-vehicleid="<%= vehicle.id %>">
+                                        <label class="form-check-label" for="flexSwitch<%= vehicle.id %>">Active</label>
+                                    </div>
+                                </td>
+                                  <td>
+                                  
+                                    <a href="/dashboard/vehicles/destroy/<%= vehicle.id %>">    <button type="button" class="btn btn-raised btn-default btn-circle waves-effect waves-circle waves-float"> <i class="material-icons">delete</i> </button></a>
+                          
+                                    <a href="/dashboard/vehicles/destroy/<%= vehicle.id %>">    <button type="button" class="btn btn-raised btn-default btn-circle waves-effect waves-circle waves-float"> <i class="material-icons">search</i> </button></a>
+                          
+                                  
+
+                                 
+
+                                  </td>
+                                </tr>
+                              <% }); %>
+                            </tbody>
+                          </table>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+        const checkboxes = document.querySelectorAll('.form-check-input');
+        
+        checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            const vehicleId = this.dataset.vehicleid;
+            const isChecked = this.checked;
+            
+            // Send an AJAX request to update the user's status
+            fetch(`/dashboard/vehicles/updateStatus/${vehicleId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify({ status: isChecked ? 1 : 0 })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    console.log('Status updated successfully');
+                    alert("Status updated successfully");
+                } else {
+                    console.error('Failed to update status');
+                    alert("Failed to update status");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+        });
+        });
+        
+        </script>
+        
+        

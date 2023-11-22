@@ -1,0 +1,802 @@
+﻿<!doctype html>
+<html class="no-js " lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
+<title>:: Nexa Bootstrap 4 Admin::</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+<body class="theme-orange">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">        
+        <div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+        <p>Please wait...</p>
+        <div class="m-t-30"><img src="assets/images/logo.svg" width="48" height="48" alt="Nexa"></div>
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div><!-- Search  -->
+<div class="search-bar">
+    <div class="search-icon"> <i class="material-icons">search</i> </div>
+    <input type="text" placeholder="Explore Nexa...">
+    <div class="close-search"> <i class="material-icons">close</i> </div>
+</div>
+<!-- Top Bar -->
+<nav class="navbar">
+    <div class="col-12">
+        
+        <div class="navbar-header">
+            <a href="javascript:void(0);" class="bars"></a>
+            <a class="navbar-brand" href="index.html">Nexa</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
+            <li><a href="javascript:void(0)" class="inbox-btn hidden-sm-down" data-close="true"><i class="zmdi zmdi-email"></i></a></li>
+            <li class="dropdown menu-app hidden-sm-down"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"> <i class="zmdi zmdi-apps"></i> </a>
+                <ul class="dropdown-menu slideDown">
+                    <li class="body">
+                        <ul class="menu">
+                            <li><a href="javascript:void(0)"><i class="zmdi zmdi-blogger"></i><span>Blog</span></a></li>
+                            <li><a href="javascript:void(0)"><i class="zmdi zmdi-accounts-list"></i><span>Contacts</span></a></li>
+                            <li><a href="javascript:void(0)"><i class="zmdi zmdi-comment-text"></i><span>Chat</span></a></li>
+                            <li><a href="javascript:void(0)"><i class="zmdi zmdi-arrows"></i><span>Notes</span></a></li>
+                            <li><a href="javascript:void(0)"><i class="zmdi zmdi-view-column"></i><span>Taskboard</span></a></li>
+                            <li><a href="javascript:void(0)"><i class="zmdi zmdi-calendar-note"></i><span>Calendar</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="zmdi zmdi-search"></i></a></li>
+            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
+                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+                </a>
+                <ul class="dropdown-menu slideDown">
+                    <li class="header">NOTIFICATIONS</li>
+                    <li class="body">
+                        <ul class="menu list-unstyled">
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle l-coral"> <i class="material-icons">person_add</i> </div>
+                                <div class="menu-info">
+                                    <h4>12 new members joined</h4>
+                                    <p> <i class="material-icons">access_time</i> 14 mins ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle l-turquoise"> <i class="material-icons">add_shopping_cart</i> </div>
+                                <div class="menu-info">
+                                    <h4>4 sales made</h4>
+                                    <p> <i class="material-icons">access_time</i> 22 mins ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle g-bg-cyan"> <i class="material-icons">delete_forever</i> </div>
+                                <div class="menu-info">
+                                    <h4><b>Nancy Doe</b> deleted account</h4>
+                                    <p> <i class="material-icons">access_time</i> 3 hours ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle g-bg-blue"> <i class="material-icons">mode_edit</i> </div>
+                                <div class="menu-info">
+                                    <h4><b>Nancy</b> changed name</h4>
+                                    <p> <i class="material-icons">access_time</i> 2 hours ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle l-slategray"> <i class="material-icons">comment</i> </div>
+                                <div class="menu-info">
+                                    <h4><b>John</b> commented your post</h4>
+                                    <p> <i class="material-icons">access_time</i> 4 hours ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle l-seagreen"> <i class="material-icons">cached</i> </div>
+                                <div class="menu-info">
+                                    <h4><b>John</b> updated status</h4>
+                                    <p> <i class="material-icons">access_time</i> 3 hours ago </p>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <div class="icon-circle l-blue"> <i class="material-icons">settings</i> </div>
+                                <div class="menu-info">
+                                    <h4>Settings updated</h4>
+                                    <p> <i class="material-icons">access_time</i> Yesterday </p>
+                                </div>
+                                </a> </li>
+                        </ul>
+                    </li>
+                    <li class="footer"> <a href="javascript:void(0);">View All Notifications</a> </li>
+                </ul>
+            </li>
+            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
+                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+                </a>
+                <ul class="dropdown-menu slideDown">
+                    <li class="header">TASKS</li>
+                    <li class="body">
+                        <ul class="menu tasks list-unstyled">
+                            <li> <a href="javascript:void(0);">
+                                <h4> Footer display issue <small>72%</small> </h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <h4> Make new buttons <small>56%</small> </h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <h4> Create new dashboard <small>68%</small> </h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <h4> Solve transition issue <small>77%</small> </h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                                </a> </li>
+                            <li> <a href="javascript:void(0);">
+                                <h4> Answer GitHub questions <small>87%</small> </h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                                </a> </li>
+                        </ul>
+                    </li>
+                    <li class="footer"> <a href="javascript:void(0);">View All Tasks</a> </li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0)" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
+            <li class=""><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Left & Right bar menu -->
+
+<!--Side menu and right menu -->
+<section> 
+	<!-- Left Sidebar -->
+	<aside id="leftsidebar" class="sidebar"> 
+		<!-- Menu -->
+		<div class="user-info">
+            <div class="image"> <img src="assets/images/xs/avatar1.jpg" width="48" height="48" alt="User" /> </div>
+            <div class="info-container">
+                <div class="name" data-toggle="dropdown">John Doe</div>
+                <div class="email">john.doe@example.com</div>
+                <div class="btn-group user-helper-dropdown"> <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> keyboard_arrow_down </i>
+                    <ul class="dropdown-menu slideUp ">
+                        <li><a href="javascript:void(0)"><i class="material-icons">person</i>Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)"><i class="material-icons">input</i>Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+		<div class="menu">
+			<ul class="list">
+				<li class="header">MAIN NAVIGATION</li>
+				<li><a href="#documenter_cover"><i class="zmdi zmdi-arrow-right"></i><span>Start </span></a></li>
+				<li><a href="#overview"><i class="zmdi zmdi-arrow-right"></i><span>Overview</span></a></li>
+				<li><a href="#features"><i class="zmdi zmdi-arrow-right"></i><span>Features</span></a></li>
+				<li><a href="#template"><i class="zmdi zmdi-arrow-right"></i><span>Template</span></a></li>
+				<li><a href="#main_menu"><i class="zmdi zmdi-arrow-right"></i><span>Main Menu</span></a></li>
+				<li><a href="#grunt_file"><i class="zmdi zmdi-arrow-right"></i><span>Grunt File</span></a></li>
+				<li><a href="#main_content"><i class="zmdi zmdi-arrow-right"></i><span>Main Content</span></a></li>            
+				<li><a href="#folder_structure"><i class="zmdi zmdi-arrow-right"></i><span>Folder Structure</span></a></li>
+				<li><a href="#css"><i class="zmdi zmdi-arrow-right"></i><span>CSS</span></a></li>
+				<li><a href="#javascript"><i class="zmdi zmdi-arrow-right"></i><span>Javascript</span></a></li>
+				<li><a href="#fonts"><i class="zmdi zmdi-arrow-right"></i><span>Fonts</span></a></li>            
+				<li><a href="#thank_you"><i class="zmdi zmdi-arrow-right"></i><span>THANK YOU!</span></a></li>
+				<li class="header">LABELS</li>
+				<li> <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-red"></i><span>Important</span> </a> </li>
+				<li> <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-amber"></i><span>Warning</span> </a> </li>
+				<li> <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-blue"></i><span>Information</span> </a> </li>
+			</ul>
+		</div>
+		<!-- #Menu --> 
+	</aside>
+	<!-- #END# Left Sidebar --> 
+	<!-- Right Sidebar -->
+	<aside id="rightsidebar" class="right-sidebar">
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#skins">Skins</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat">Chat</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#settings">Setting</a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane in active in active slideRight" id="skins">
+                <div class="slim_scroll">
+                    <h6>Flat Color</h6>
+                    <ul class="choose-skin">                   
+                        <li data-theme="purple">
+                            <div class="purple"></div>
+                            <span>Purple</span> </li>                   
+                        <li data-theme="blue">
+                            <div class="blue"></div>
+                            <span>Blue</span> </li>
+                        <li data-theme="cyan">
+                            <div class="cyan"></div>
+                            <span>Cyan</span>
+                        </li>                        
+                    </ul>                    
+                    <h6>Multi Color</h6>
+                    <ul class="choose-skin">                        
+                        <li data-theme="black">
+                            <div class="black"></div>
+                            <span>Black</span> </li>
+                        <li data-theme="deep-purple">
+                            <div class="deep-purple"></div>
+                            <span>Deep Purple</span> </li>
+                        <li data-theme="red">
+                            <div class="red"></div>
+                            <span>Red</span>
+                        </li>                        
+                    </ul>                    
+                    <h6>Gradient Color</h6>
+                    <ul class="choose-skin">                    
+                        <li data-theme="green">
+                            <div class="green"></div>
+                            <span>Green</span> </li>
+                        <li data-theme="orange"  class="active">
+                            <div class="orange"></div>
+                            <span>Orange</span> </li>
+                        <li data-theme="blush">
+                            <div class="blush"></div>
+                            <span>Blush</span>
+                        </li>
+                    </ul>
+                </div>                
+            </div>
+            <div role="tabpanel" class="tab-pane pullUp" id="chat">
+                <div class="right_chat slim_scroll">
+                    <div class="search">
+                        <div class="input-group">
+                            <div class="form-line">
+                                <input type="text" class="form-control" placeholder="Search..." required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                    <h6>Recent</h6>
+                    <ul class="list-unstyled">
+                        <li class="online">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Sophia</span>
+                                        <span class="message">There are many variations of passages of Lorem Ipsum available</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>                            
+                        </li>
+                        <li class="online">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Grayson</span>
+                                        <span class="message">All the Lorem Ipsum generators on the</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>                            
+                        </li>
+                        <li class="offline">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Isabella</span>
+                                        <span class="message">Contrary to popular belief, Lorem Ipsum</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>                            
+                        </li>
+                        <li class="me">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">John</span>
+                                        <span class="message">It is a long established fact that a reader</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>                            
+                        </li>
+                        <li class="online">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Alexander</span>
+                                        <span class="message">Richard McClintock, a Latin professor</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>                            
+                        </li>                        
+                    </ul>
+                    <h6>Contacts</h6>
+                    <ul class="list-unstyled">
+                        <li class="offline inlineblock">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar10.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="offline inlineblock">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar6.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="offline inlineblock">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar7.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="offline inlineblock">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar8.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="offline inlineblock">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar9.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="online inlineblock">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="offline inlineblock">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="offline inlineblock">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="online inlineblock">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="offline inlineblock">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane slideLeft" id="settings">
+                <div class="settings slim_scroll">
+                    <p class="text-left">General Settings</p>
+                    <ul class="setting-list">
+                        <li> <span>Report Panel Usage</span>
+                            <div class="switch">
+                                <label>
+                                    <input type="checkbox" checked>
+                                    <span class="lever"></span></label>
+                            </div>
+                        </li>
+                        <li> <span>Email Redirect</span>
+                            <div class="switch">
+                                <label>
+                                    <input type="checkbox">
+                                    <span class="lever"></span></label>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="text-left">System Settings</p>
+                    <ul class="setting-list">
+                        <li> <span>Notifications</span>
+                            <div class="switch">
+                                <label>
+                                    <input type="checkbox" checked>
+                                    <span class="lever"></span></label>
+                            </div>
+                        </li>
+                        <li> <span>Auto Updates</span>
+                            <div class="switch">
+                                <label>
+                                    <input type="checkbox" checked>
+                                    <span class="lever"></span></label>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="text-left">Account Settings</p>
+                    <ul class="setting-list">
+                        <li> <span>Offline</span>
+                            <div class="switch">
+                                <label>
+                                    <input type="checkbox">
+                                    <span class="lever"></span></label>
+                            </div>
+                        </li>
+                        <li> <span>Location Permission</span>
+                            <div class="switch">
+                                <label>
+                                    <input type="checkbox" checked>
+                                    <span class="lever"></span></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+	<!-- #END# Right Sidebar --> 
+</section>
+
+<!-- main content -->
+<section class="content home">
+	<div class="block-header">
+		<div class="row">
+			<div class="col-lg-7 col-md-6 col-sm-12">
+				<h2>Documentation
+				<small class="text-muted">Welcome to Nexa Application</small>
+				</h2>
+			</div>
+			<div class="col-lg-5 col-md-6 col-sm-12">
+				<ul class="breadcrumb float-md-right">
+					<li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Nexa</a></li>
+					<li class="breadcrumb-item active">Documentation</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">		
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="documenter_cover">
+					<div class="header">
+						<h2>Start Nexa</h2>
+					</div>
+					<div class="body">
+						<h2>Nexa Hospital- Bring your Admin Panel to life.</h2>
+							<ul>
+							<li>Created: 20/Dec/2017</li>
+							<li>latest update: 12/Feb/2021</li>
+							<li>by: WrapTheme</li>							
+							<li>email : <a href="mailto:wraptheme@gmail.com">wraptheme@gmail.com</a></li>
+						</ul>
+						<p>Thank you for purchasing our template. If you have any questions that are beyond the scope of this help file, please feel free to email at wraptheme@gmail.com</p>
+                        <p>If you really like our work, design, performance and support then <a href="https://themeforest.net/downloads"> Please don't forgot to rate us</a>, it really motivate us to provide something better.
+							<span>
+                                <i class="zmdi zmdi-star col-amber m-r-5"></i>
+                                <i class="zmdi zmdi-star col-amber m-r-5"></i>
+                                <i class="zmdi zmdi-star col-amber m-r-5"></i>
+                                <i class="zmdi zmdi-star col-amber m-r-5"></i>
+                                <i class="zmdi zmdi-star col-amber"></i>
+                            </span>
+                        </p>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="overview">
+					<div class="header">
+						<h2>Brief Overview</h2>
+					</div>
+					<div class="body">
+						<p>Nexa is a popular open source WebApp template for admin dashboards and admin panels. It’s responsive HTML template, which is based on the Bootstrap 4X framework. It utilizes all of the Bootstrap components in design and re-styles many commonly used plugins to create a consistent design that can be used as a user interface for backend applications.</p>
+						<p>Nexa is based on a modular design, which allows it to be easily customised and built upon any backend project in no-time. Our documentation will guide you through installing the template and exploring the various components that are bundled with the template.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="features">
+					<div class="header">
+						<h2>Features</h2>
+					</div>
+					<div class="body">
+						<ol>
+							<li><strong>Bootstrap 4x <strong>(New)</strong></strong></li>
+							<li>Latest <strong>jquery v3.2.1</strong></li>
+							<li><strong>RTL</strong> Support</li>
+							<li><strong>9 Unique</strong> Color Scheme <strong>(New)</strong></li>
+							<li><strong>5 Dashboard</strong> Version</li>
+							<li>Built in <strong>SASS</strong></li>	
+							<li>JS Bundling Ready (<strong>Bundle</strong>)</li>
+							<li><strong>Material Kit added</strong></li>
+                            <li>Invoice</li>
+                            <li>eCommerce <strong>(New)</strong></li>
+							<li><strong>Inbox</strong> Full App</li>
+							<li><strong>Blog</strong> full section with <strong>Dashboard</strong></li>
+							<li>Ready to used <strong>widgets</strong></li>
+							<li>User <strong>Profile</strong> Page</li>
+							<li><strong>Chat App <strong>(New)</strong></strong></li>
+							<li>Contact list <strong>(New)</strong></li>
+							<li>Timeline <strong>(New)</strong></li>
+							<li><strong>Calendar</strong> integration</li>
+							<li><strong>Jquery DataTables</strong></li>
+							<li>Editable Tables</li>
+							<li>Responsive Tables</li>
+							<li>File Upload</li>
+							<li>Form Wizard</li>
+							<li>Form <strong>Validation</strong></li>
+							<li>Advanced Form Elements <strong>(New)</strong></li>
+							<li>Animations</li>
+							<li>Sortable & Nestable</li>
+							<li><strong>Sweet Alert</strong> Dialog</li>
+							<li>Image Gallery</li>
+							<li>3000+ Icons</li>
+							<li>Fully <strong>Responsive</strong> & Interactive</li>
+							<li>Elegant & Clean User Interface</li>
+							<li>Expanded and Collapsed Menu (Multi Menu Levels)</li>		
+							<li>IOS type Switches</li>	
+							<li>Messenger Notifications</li>
+							<li>Grid Based System</li>
+							<li><strong>login</strong>, lock screen, 404, 500 Error Pages</li>
+							<li>70+ Pages</li>	
+							<li>Detailed Documentation</li>
+							<li>Works well in all latest browsers like Chrome, Firefox, Opera, Safari, IE11+</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="template">
+					<div class="header">
+						<h2>Template</h2>
+					</div>
+					<div class="body">
+						<p>The template consist of following components as show in image below:</p>
+						<ol>
+							<li>Main header Top Bar - Consist of logo, toggle options like the chat , messages, notifications, search,</li>
+							<li>Side bar -user profile shortcuts,  Consist of user image and details, Main menu, Bar Graph Widgets</li>
+							<li>Content Body</li>
+							<li>Right Bar - Consist of groups and Contact Users for instant messaging. Click on user opens the chat window with that user.</li>
+						</ol>						
+						<p> <img alt="" src="assets/images/1.png" class="img-fluid"></p>
+						<h3>HTML Structre</h3>
+						<h4>Page Head</h4>
+						<p> <img alt="" src="assets/images/html.png" class="img-fluid"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="main_menu">
+					<div class="header">
+						<h2>Main Menu</h2>
+					</div>
+					<div class="body">
+						<img alt="" src="assets/images/2.png" class="img-fluid">								
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="grunt_file">
+					<div class="header">
+						<h2>Grunt File</h2>
+					</div>
+					<div class="body">
+						<img alt="" src="assets/images/4.png" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="main_content">
+					<div class="header">
+						<h2>Main Content</h2>
+					</div>
+					<div class="body">
+<pre class="prettyprint lang-html linenums">
+<pre class="html" id="line1">
+    &lt;!-- START CONTENT --&gt;
+    &lt;section id="main-content" class=" "&gt;
+        &lt;section class="wrapper"&gt;
+
+        &lt;div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'&gt;
+            &lt;div class="page-title"&gt;
+                ...               
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="clearfix"&gt;&lt;/div&gt;
+        
+        &lt;div class="col-lg-12"&gt;
+            &lt;section class="box "&gt;
+                ...
+            &lt;/section&gt;
+        &lt;/div&gt;
+
+        &lt;/section&gt;
+    &lt;/section&gt;
+    &lt;!-- END CONTENT --&gt;
+</pre>
+</pre>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="folder_structure">
+					<div class="header">
+						<h2>Folder Structure</h2>
+					</div>
+					<div class="body">
+<pre class="prettyprint"><span class="pln">HTML</span><span class="pun">/</span><span class="pln">
+</span><span class="pun">├──</span><span class="pln"> assets</span><span class="pun">/</span><span class="pln">
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> bundles<span class="pun">/</span>
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> css<span class="pun">/</span>	
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> fonts<span class="pun">/</span>
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> images<span class="pun">/</span>
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> js<span class="pun">/</span>
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> </span><span class="pun">├──</span><span class="pln"> Page<span class="pun">/</span>              
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> plugins<span class="pun">/</span>    
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> sass<span class="pun">/</span>
+</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="css">
+					<div class="header">
+						<h2>CSS Structure</h2>
+					</div>
+					<div class="body">
+						<p>main.css is the main CSS file located in assets/css/ folder of the package. Whole CSS file is well indexed with topic and its related code.</p>
+						<p class="m-b-30">Also animate.min.css file is found in this folder. It has all the animation classes for various elements.</p>
+						<img alt="" src="assets/images/6.png" style="max-width: 100%;margin-right:50px;vertical-align:top;margin-bottom:30px;">
+						<img alt="" src="assets/images/7.png" style="max-width: 100%;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="javascript">
+					<div class="header">
+						<h2>Javascript</h2>
+					</div>
+					<div class="body">
+						<p>Nexa admin.js is the mail javascript file having all the js code. File is located in assets/js/ folder. This file code is also well formatted and section in different respective function names.</p>
+						<p class="m-b-30">Along with this chart library based js code and dashboard based js code are added in separate files for ease of use of user.</p>
+						<p> <img alt="" src="assets/images/8.png" style="max-width: 100%;"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="fonts">
+					<div class="header">
+						<h2>Font Used</h2>
+					</div>
+					<div class="body">
+						<p>Google fonts are used in the template. They are as follows: <a href="https://fonts.google.com/specimen/Muli">Muli</a></p>
+						<p>Material Design Iconic Font: <a href="http://zavoloklom.github.io/material-design-iconic-font/icons.html#directional">Click to See</a></p>
+						<p>All Images are used: <a href="https://www.pexels.com/">Pexels.com</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="col-sm-12 col-xs-12">
+				<div class="card" id="thank_you">
+					<div class="header">
+						<h2>THANK YOU!</h2>
+					</div>
+					<div class="body">
+						<p> Once again, thank you so much for purchasing this template. As I said at the beginning, I&#39;d be glad to help you if you have any questions relating to this template.</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</section>
+
+<!-- Jquery Core Js --> 
+<script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js ( jquery.v2.1.4.js ) --> 
+<script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js --> 
+
+<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
+<script src="assets/js/index.js"></script>
+
+<script>
+	$('#leftsidebar .list li').click(function(){
+		var $this = $(this);
+		if(!$this.is('active open'))
+		{
+			$('#leftsidebar .list li').removeClass('active open').removeData("top");
+			$this.addClass('active open').data("top", $this.offset().top);
+		}
+	});
+	document.createElement('section');
+	var duration = '500',
+	easing = 'swing';
+</script>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<style>
+  .translate-ltr {
+    margin-top: -40px !important;
+
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .skiptranslate iframe {
+    display: none;
+  }
+
+  .VIpgJd-ZVi9od-ORHb {
+    display: none !important;
+    opacity: 0;
+  }
+
+  table {
+    display: none;
+  }
+
+  .translate-ltr {
+    margin-top: -40px;
+
+  }
+
+  .goog-te-banner-frame {
+    display: none !important;
+    margin-top: -20px;
+
+  }
+
+  .goog-logo-link {
+    display: none !important;
+  }
+
+  .goog-te-gadget {
+    color: transparent !important;
+  }
+
+  .goog-te-gadget span {
+    display: none;
+  }
+
+  .goog-te-gadget .goog-te-combo {
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: white;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0;
+  }
+
+  .goog-te-gadget .goog-te-combo option {
+    color: #343A41;
+    font-size: 14px;
+
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0;
+  }
+  .goog-te-combo{
+    font-size: 14px !important;
+   font-weight: bold !important;
+    -webkit-appearance: none !important;
+     cursor: pointer;
+  }
+ #googleElement .skiptranslate div select{
+margin-top: 25px !important;
+  font-style: 5px !important;
+  color:  rgba(255, 255, 255, 0.5) !important;
+ }
+ .btn-1{
+  display: block;
+ }
+ .btn-2{
+  display: none;
+ }
+ @media(max-width: 1300px) {
+  .btn-1{
+  display: none;
+ }
+ 
+ .btn-2{
+  display: block;
+ }
+ }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed;
+  width: 100%;
+  background-color: #343A41 !important;
+  z-index: 9999;
+  top: 0px;">
+  <a class="navbar-brand" href="/">
+    <img src="<%= baseUrl %>/logo/logo.png" alt="" style="height: 50px; width: 150px;"
+      class="d-inline-block align-top img-fluid">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- <%= activeRoute === 'website_index' ? 'active' : '' %>
+  <%= activeRoute === 'website_services' ? 'active' : '' %>
+  <%= activeRoute === 'website_contact' ? 'active' : '' %>
+  <%= activeRoute === 'website_about' ? 'active' : '' %> -->
+  <div class="collapse navbar-collapse " id="navbarText">
+    <div class="ml-auto"> <!-- Add this div with ml-auto class -->
+      <ul class="navbar-nav">
+
+        <li class="nav-item  d-flex align-items-center"><a
+            href="/" class="nav-link">Home</a></li>
+
+
+        <li class="nav-item  d-flex align-items-center"><a
+            href="/services" class="nav-link">Careers</a></li>
+
+        <li class="nav-item d-flex align-items-center">
+
+          <div id="googleElement"></div>
+
+        </li>
+
+        <li class="nav-item  d-flex align-items-center"><a
+            href="/contact" class="nav-link">Support</a></li>
+
+        <li class="nav-item  d-flex align-items-center">
+          <a href="/about" class="nav-link">About</a>
+        </li>
+
+
+
+        <% if (sessionCustomerInfo.token) { %>
+          <a href="/logout" class="btn btn-warning  my-sm-0 rounded-pill">Logout</a></li>
+
+          <% }else{ %>
+            <a style="    height: 40px;
+            margin-top: 10px !important;" class="btn btn-warning  my-sm-0 rounded-pill btn-1" data-toggle="modal" data-target="#loginModal">Login/SignUp </a>
+            <a href="/auth-login" style="    height: 40px;
+            margin-top: 10px !important;" class="btn btn-warning  my-sm-0 rounded-pill btn-2">Login/SignUp </a>
+            <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<style>
+
+  .navbar-nav .nav-item .btn {
+    border-radius: 20px;
+    /* Adjust the value as needed for your desired roundness */
+  }
+
+  .navbar-nav {
+    display: flex;
+    list-style-type: none;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 40px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0;
+  }
+  .modal{
+    top: 60px !important;
+    left: 380px !important;
+    transition: 0.8s;
+
+  }
+  .modal-backdrop.show {
+    opacity: 0;
+}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-warning bg-warning " style="position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 75px;">
+  <div class="container">
+    <ul class="navbar-nav mx-auto">
+
+
+      <li class="nav-item <%= activeRoute === 'website_about' ? 'active' : '' %> d-flex align-items-center">
+        <div class="dropdown">
+          <a class="nav-link  text-white mt-2" href="/startReservation" role="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Rent
+          </a>
+      
+          <ul class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="/startReservation">Start Your Reservation</a></li>
+            <li><a class="dropdown-item" href="/rentacar">Rent a Car Near Me</a></li>
+            <!-- <li><a class="dropdown-item" href="/sell_car">Sell Car </a></li> -->
+            <li><a class="dropdown-item" href="/extendRental">Extend my Rental</a></li>
+            <li><a class="dropdown-item" href="/viewModify">View / Modify / Cancel</a></li>
+            <li><a class="dropdown-item" href="/collection">Ultimate Collection</a></li>
+            <li><a class="dropdown-item" href="/policy">Polices</a></li>
+          </ul>
+        </div>
+      </li>
+      
+      <div id="divi" class="d-flex align-items-center mt-2">
+      <li class="nav-item "><a href="/buy_car" style="font-size: 14px;" class="nav-link text-white">Buy Car</a></li>
+      <!-- <li class="nav-item "><a href="/" class="nav-link" style="font-size: 14px;">Start Your Reservation</a></li>
+          <li class="nav-item "><a href="/" class="nav-link" style="font-size: 12x;">Car Rental Near Me</a></li> -->
+      <li class="nav-item "><a href="/auth-login" class="nav-link text-white" style="font-size: 14px;">Affilate Program</a></li>
+      <li class="nav-item "><a href="/auth-login" class="nav-link text-white" style="font-size: 14px;">Become a member</a></li>
+      
+      
+      <!-- <li class="nav-item <%= activeRoute === 'website_pricing' ? 'active' : '' %>"><a href="/pricing" class="nav-link">Pricing</a></li> -->
+      <li class="nav-item <%= activeRoute === 'website_cars' ? 'active' : '' %>"><a href="/cars"
+        class="nav-link text-white">Cars</a></li>
+        
+      </div>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 10000;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #343A41;">
+
+        <a class="navbar-brand" href="/">
+          <img src="<%= baseUrl %>/logo/logo.png" alt="" style="height: 50px; width: 150px;"
+            class="d-inline-block align-top img-fluid">
+        </a>
+
+      </div>
+      <div class="modal-body">
+        <form method="post" action="/auth-login-post">
+  
+                  
+          <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+
+        
+          <div class="form-outline mb-4">
+            <input type="email" id="form2Example17" name="email" class="form-control form-control-lg" />
+            <label class="form-label" for="form2Example17">Email address</label>
+          </div>
+
+          <div class="form-outline mb-4">
+            <input type="password" id="form2Example27" name="password" class="form-control form-control-lg" />
+            <label class="form-label" for="form2Example27">Password</label>
+          </div>
+
+          <div class="pt-1 mb-4">
+            <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
+          </div>
+
+          <a class="small text-muted" href="/auth-verify">Forgot password?</a>
+          <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="/auth-register"
+              style="color: #393f81;">Register here</a></p>
+          <a href="#!" class="small text-muted">Terms of use.</a>
+          <a href="#!" class="small text-muted">Privacy policy</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+  let path=window.location.pathname;
+  if(path=="/startReservation" || path=="/rentacar" || path=="/extendRental" || path=="/viewModify"  || path=="/collection" || path=="/policy" ){
+ let divi=document.getElementById("divi");
+ divi.innerHTML=`
+ <li class="nav-item "><a href="/startReservation" class="nav-link" style="font-size: 11px;">Start Your Reservation</a></li>
+      <li class="nav-item "><a href="/rentacar" class="nav-link" style="font-size: 11px;">Rent a Car Near Me</a></li>
+      <li class="nav-item "><a href="/extendRental" class="nav-link" style="font-size: 11px;">Extend my Rental</a></li>
+      <li class="nav-item "><a href="/viewModify" class="nav-link" style="font-size: 11px;">View / Modify / Cancel</a></li>
+      <li class="nav-item "><a href="/collection" class="nav-link" style="font-size: 11px;">Ultimate Collection</a></li>
+      <li class="nav-item "><a href="/policy" class="nav-link" style="font-size: 11px;">Polices</a></li>
+     
+    
+ `
+
+
+  }
+</script>
+<script type="text/javascript">
+
+  let cls = document.querySelector('.goog-te-combo');
+  console.log(cls);
+  function loadGoogleTranslate() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,es,fr,de', // You can specify multiple languages here
+      layout: google.translate.TranslateElement, // Change layout as needed
+      autoDisplay: false, // Disable automatic translation
+    }, 'googleElement');
+  }
+
+
+</script>

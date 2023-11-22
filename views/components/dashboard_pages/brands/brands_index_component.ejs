@@ -1,0 +1,58 @@
+
+   
+     
+    <%- include('../alerts') %>
+        
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2> Index </h2>
+
+                        <ul class="header-dropdown">
+                            <a href="/dashboard/brands/create" class="btn  btn-raised bg-light waves-effect">Create New Brand</a>
+                          
+                        </ul>
+                    
+                    </div>
+                    <div class="body">
+                        <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+                            <thead>
+                                <tr>
+                                    <th>Brand Name</th>
+                                
+                                  
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                             
+                                <tr>
+                                    <th>Brand Name</th>
+                               
+                                 
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <% brands.forEach(function(b){ %>
+                                <tr>
+                                    <td><%= b.brand_name %></td>
+                                  
+                                   
+                                    <td>
+                                        <a href="/dashboard/brands/destroy/<%= b.id %>">    <button type="button" class="btn btn-raised btn-default btn-circle waves-effect waves-circle waves-float"> <i class="material-icons">delete</i> </button></a>
+
+                                    </td>
+                                  
+                                </tr>
+                                <% }); %>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+

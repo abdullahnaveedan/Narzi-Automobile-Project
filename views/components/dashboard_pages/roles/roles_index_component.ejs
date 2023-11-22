@@ -1,0 +1,52 @@
+
+   
+    <%- include('../alerts') %>
+        
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2> Index </h2>
+                        
+                        <ul class="header-dropdown">
+                            <a href="/dashboard/roles/create" class="btn  btn-raised bg-light waves-effect">Create New Role</a>
+                          
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+                            <thead>
+                                <tr>
+                                    <th>Role Name</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Role Name</th>
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                             x <% roles.forEach(function(r){ %>
+                                <tr>
+                                    <td><%= r.role_name %></td>
+                                    <td>
+                                        <!-- <button type="button" class="btn btn-raised btn-default btn-circle waves-effect waves-circle waves-float"> <i class="material-icons">edit</i> </button>
+                                       -->
+
+                                       <a href="/dashboard/roles/destroy/<%= r.id %>">    <button type="button" class="btn btn-raised btn-default btn-circle waves-effect waves-circle waves-float"> <i class="material-icons">delete</i> </button></a>
+                          
+                                    </td>
+                                  
+                                </tr>
+                                <% }); %>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+

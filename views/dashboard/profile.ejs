@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<%- include('classes/head') %>
+<body class="theme-orange">
+<!-- Page Loader -->
+<%- include('classes/loader') %>
+<!-- Overlay For Sidebars -->
+<%- include('classes/search') %>
+
+<!-- Top Bar -->
+<%- include('classes/navbar') %>
+<!-- Left Sidebar -->
+<%- include('classes/sidebar') %>
+
+
+<!-- Main Content -->
+<section class="content profile-page">
+   
+    <div class="container-fluid">
+        <%- include('../components/dashboard_pages/profile_component') %>
+        <%- include('classes/footer') %>
+    </div>
+</section>
+
+
+<!-- Jquery Core Js --> 
+<%- include('classes/footer_links') %>
+</body>
+</html>

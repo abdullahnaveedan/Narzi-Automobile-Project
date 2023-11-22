@@ -1,0 +1,180 @@
+<%- include('../dashboard_pages/auth_alerts') %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        section {
+            margin-top: 120px;
+            margin-bottom: 100px;
+        }
+    </style>
+    <section>
+
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-md-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item" style="border-bottom:2px solid gainsboro !important ;">
+                            <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" aria-current="page"
+                                href="#">Narzi</a>
+                        </li>
+                        <li class="nav-item" style="border-bottom:2px solid gainsboro !important ;">
+                            <a class="nav-link text-dark " style="font-size: 16px;" href="#">Featured Offer</a>
+                        </li>
+                        <li class="nav-item" style="border-bottom:2px solid gainsboro !important ;">
+                            <a class="nav-link text-dark" style="font-size: 16px;" href="#">Partner Offers</a>
+                        </li>
+                        <li class="nav-item" style="border-bottom:2px solid gainsboro !important ;">
+                            <a class="nav-link text-dark" style="font-size: 16px;" href="#">Global Destinations</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-8 ">
+                    <div class="" style="margin-top: 60px;">
+                        <h6>Car Rental Near Me</h6>
+                        <span style="font-size: 12px !important;">Find car rental near you with Hertz and reserve a
+                            vehicle for your next trip online. Use the map below to find the closest Hertz branch to you
+                            and start your reservation now.</span>
+                    </div>
+                    <div class="container-fluid m-0 p-0">
+                        <div class="row m-0 p-0">
+                            <div class="col-md-6 m-0 p-0">
+                                <h6 class="mt-4">Car Rental Near Me</h6>
+                                <p style="font-size: 12px !important;">It’s easy to find quality cars available for
+                                    rent near you with us. We have thousands of locations at airports, cities and
+                                    neighborhoods across the US and beyond.</p>
+                                <p style="font-size: 12px !important;">Simply choose your nearest Hertz desk, either
+                                    using our map or by checking out our full list of locations. Next, arrange pick-up
+                                    and drop-off dates that suit your travel times.
+
+                                </p>
+                                <p style="font-size: 12px !important;">Then, select your vehicle from our wide range
+                                    of rental cars. We have a huge choice of electric cars, SUVs, sedans, convertibles,
+                                    vans and more near you – check out our up-to-date vehicle list today.</p>
+
+                                <p style="font-size: 12px !important;">Once you’re done, simply check out and our
+                                    team will be ready to help you hit the road and start your journey.</p>
+                            </div>
+                            <div class="col-md-6 bg-light p-2">
+
+                                <form action="">
+                                    <div >
+                                        
+                                        <label for="inputPassword5" class="form-label"><span style="font-size: 14px;">Pick-up Location</span>  <span style="font-size: 10px;"> (City, State, Airport Code or US Zip Code)</span></label>
+                                        <input type="text" id="location" class="form-control" aria-describedby="passwordHelpBlock">
+                                        <a id="getLocation" style="text-decoration: underline;font-size: 13px; cursor: pointer;">Help me find a location</a>
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Return car to a different Hertz location  
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-12 d-flex align-items-center m-0 p-0">
+                                        <div class="col-md-6" >
+                                            <label for="inputPassword5" class="form-label  " style="font-size: 14px;width: 200px !important;">Pick-up Date & Time: </label>
+                                            <input type="date" id="date" name="date" class="form-control col-md-12" aria-describedby="passwordHelpBlock">
+                                        </div>
+                                        <div class="col-md-6 " style="margin-top: 40px;">
+                                            <input type="time" id="time" name="date" class="form-control col-md-12" aria-describedby="passwordHelpBlock">
+                                        </div>
+                                      </div>
+                                      <div class="col-md-12  m-0 p-0 d-flex align-items-center">
+                                        <div class="col-md-6">
+                                            <label for="inputPassword5" class="form-label"><span style="font-size: 14px;">Return Date & Time: </span></label>
+                                            <input type="date" id="date" name="date" class="form-control col-md-12" aria-describedby="passwordHelpBlock">
+                                        </div>
+                                        <div class="col-md-6 " style="margin-top: 40px;">
+                                            <input type="time" id="time" name="date" class="form-control col-md-12" aria-describedby="passwordHelpBlock">
+                                        </div>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Enter a Discount or Promo Code   
+                                        </label>
+                                      </div>
+                                      <div class="d-flex  justify-content-end  mt-3 p-2 col-md-12" >
+                                        <button style="margin-right: 20px;" class=" btn btn-outline-primary ">Book as Member</button>
+                                        <button  class=" btn btn-outline-warning">Book as Guest</button>
+                                      </div>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // const button = document.getElementById("getLocation");
+        const getLocationButton = document.getElementById("getLocation");
+        const locationInput = document.getElementById("location");
+
+
+        function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            console.error("Geolocation is not supported by this browser.");
+        }
+        }
+
+        function showPosition(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        var address = latitude +','+longitude
+        
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+        .then(response => response.json())
+        .then(data => {
+        const addresss = data.display_name;
+
+
+        locationInput.value = addresss;
+        })
+        .catch(error => console.error('Error:', error));
+
+        }
+
+        function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+            console.error("User denied the request for geolocation.");
+            break;
+            case error.POSITION_UNAVAILABLE:
+            console.error("Location information is unavailable.");
+            break;
+            case error.TIMEOUT:
+            console.error("The request to get user location timed out.");
+            break;
+            case error.UNKNOWN_ERROR:
+            console.error("An unknown error occurred.");
+            break;
+            default:
+            console.error("An error occurred.");
+        }
+        }
+
+        getLocationButton.addEventListener("click", getLocation);
+    </script>
+
+
+
+
+    <!-- <%- include('../website_components/latest_services_component') %> -->
+
+    <!-- <%- include('../website_components/become_driver_component') %>
+
+
+<%- include('../website_components/testimonial_component') %>
+
+
+
+<%- include('../website_components/counting_component') %> -->

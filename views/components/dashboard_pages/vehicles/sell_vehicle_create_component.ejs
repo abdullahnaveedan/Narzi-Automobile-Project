@@ -1,0 +1,124 @@
+
+
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="card">
+            <div class="header">
+                <h2>Sell Your Car</h2>
+            </div>
+            <div class="body">
+                <form id="form_advanced_validation" method="POST">
+
+                    <div class="form-group form-float">
+                        <select class="form-control show-tick" name="brand">
+                            <option value="">Select Vehicle Brand</option>
+                            <option value="honda">Honda</option>
+                            <option value="toyota">Toyota</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        <div class="help-info">Please select vehicle brand</div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="name" maxlength="100" minlength="3" required>
+                            <label class="form-label">Vehicle Name</label>
+                        </div>
+                        <div class="help-info">Min. 3, Max. 100 characters</div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="license_plate" required>
+                            <label class="form-label">License Plate Number</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="vin" required>
+                            <label class="form-label">VIN (Vehicle Identification Number)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="number" class="form-control" name="year" min="1900" max="2100" required>
+                            <label class="form-label">Year</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="color" required>
+                            <label class="form-label">Color</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <input type="number" class="form-control" name="mileage" required>
+                        <div class="help-info">Enter current mileage</div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <select class="form-control show-tick" name="fuel_type">
+                            <option value="">Select Fuel Type</option>
+                            <option value="petrol">Petrol</option>
+                            <option value="diesel">Diesel</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        <div class="help-info">Please select fuel type</div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <input type="number" class="form-control" name="price" required>
+                        <div class="help-info">Enter selling price</div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="contact_person" required>
+                            <label class="form-label">Contact Person</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="tel" class="form-control" name="phone_number" required>
+                            <label class="form-label">Phone Number</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="email" class="form-control" name="email_address" required>
+                            <label class="form-label">Email Address</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-float">
+                        <textarea class="form-control" name="description"></textarea>
+                        <div class="help-info">Enter vehicle description</div>
+                    </div>
+
+                    </form>
+
+                    <div class="form-group form-float">
+                        <form action="/" id="frmFileUpload" class="dropzone" method="post" enctype="multipart/form-data">
+                            <div class="dz-message">
+                                <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
+                                <h3>Drop files here or click to upload.</h3>
+                                <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em> </div>
+                            <div class="fallback">
+                                <input name="file" type="file" multiple />
+                            </div>
+                        </form>
+                        
+                    </div>
+
+                    <button class="btn btn-raised btn-primary waves-effect" type="submit">SELL</button>
+               
+            </div>
+        </div>
+    </div>
+</div>

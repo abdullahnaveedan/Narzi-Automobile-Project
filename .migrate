@@ -1,0 +1,13 @@
+{
+  "lastRun": "1696071866672-createuserstable.js",
+  "migrations": [
+    {
+      "title": "1696071859727-createrolestable.js",
+      "timestamp": 1696072462726
+    },
+    {
+      "title": "1696071866672-createuserstable.js",
+      "timestamp": 1696072462774
+    }
+  ]
+}
